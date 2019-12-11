@@ -54,10 +54,26 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Boundaries.cs" />
+     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Door.cs" />
+     <Compile Include="Assets\Scripts\GameOver.cs" />
+     <Compile Include="Assets\Scripts\Health.cs" />
+     <Compile Include="Assets\Scripts\HealthPack.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\PlayerScore.cs" />
      <Compile Include="Assets\Scripts\Remove.cs" />
+     <Compile Include="Assets\Scripts\Remove2.cs" />
+     <Compile Include="Assets\Scripts\SceneManagement.cs" />
+     <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\Shooting.cs" />
+     <Compile Include="Assets\Scripts\start.cs" />
+     <Compile Include="Assets\Scripts\TankScript.cs" />
+     <Compile Include="Assets\Scripts\TurretScript.cs" />
+     <Compile Include="Assets\Scripts\TurretScript2.cs" />
+     <Compile Include="Assets\Scripts\Win.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
