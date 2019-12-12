@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
-    // Update is called once per frame
+    // Pauses and resusmes the game on pressing of the space bar
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -28,6 +28,7 @@ public class PauseMenu : MonoBehaviour
         
     }
 
+    //Resumes game after it has been paused
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
@@ -35,6 +36,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
     }
 
+    //Pauses game by setting tiemscale o 0
     void Pause()
     {
         pauseMenuUI.SetActive(true);
@@ -42,6 +44,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
     }
 
+    //Loads the main menu scene
     public void LoadMenu()
     {
         Debug.Log("Loading");
@@ -49,6 +52,8 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    //Quits the application
+    //Only works when build is run
     public void Quit()
     {
         Application.Quit();

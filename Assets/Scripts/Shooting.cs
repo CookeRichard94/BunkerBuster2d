@@ -10,7 +10,7 @@ public class Shooting : MonoBehaviour
 
     public float bulletForce = 20f;
 
-    // Update is called once per frame
+    // Calls shoot method if left mouse button is pressed
     void Update()
     {
         if(Input.GetButtonDown("Fire1"))
@@ -19,6 +19,7 @@ public class Shooting : MonoBehaviour
         }
     }
 
+    // Shoot method that adds force to player bullets
     void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);

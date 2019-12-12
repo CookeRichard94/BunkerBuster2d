@@ -7,6 +7,7 @@ public class CameraFollow : MonoBehaviour
     [SerializeField]
     private Transform target;
  
+ // fucntion for the camera to follow the player
      void Update () {
          transform.position = new Vector3(Mathf.Clamp(target.position.x,0f, 0f), Mathf.Clamp(target.position.y,0f, 50f), transform.position.z);
      }

@@ -14,13 +14,13 @@ public class TurretScript2 : MonoBehaviour
     public GameObject playerBullet;
     public GameObject player;
 
-    // Start is called before the first frame update
+    // Consistently calls the shoot method
     void Start()
     {
         InvokeRepeating("shoot", 0.5f, 2f);
     }
 
-    // Update is called once per frame
+    // Method to have the enemy constantly aiming at the player
     void Update()
     {
         Vector3 targetPosition = player.transform.position;
@@ -30,6 +30,7 @@ public class TurretScript2 : MonoBehaviour
         Quaternion.Euler(0f,0f,angle * Mathf.Rad2Deg - 90f);
     }
 
+    //Adds force to the enemy bullets
     void shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
@@ -38,6 +39,7 @@ public class TurretScript2 : MonoBehaviour
         
     }
 
+    //method to hurt the enemy and when enemy reaches 0 health destory it and add score to the player
     public void hurt(int damage)
     {
         health = health - damage;

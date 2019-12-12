@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Loads the tutorial scene of the game
     public void PlayGame() 
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    // Quits the application only works when built
     public void QuitGame()
     {
         Debug.Log("QUIT!");

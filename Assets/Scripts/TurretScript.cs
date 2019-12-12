@@ -16,12 +16,13 @@ public class TurretScript : MonoBehaviour
     public GameObject playerBullet;
     public GameObject player;
 
-    // Update is called once per frame
+    // Calls the shoot method at consistent rate
     void Start()
     {
        InvokeRepeating("shoot", 2.0f, 3f);
     }
 
+    // Adds force to eenmy bullets
     void shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
@@ -30,6 +31,7 @@ public class TurretScript : MonoBehaviour
         
     }
 
+    // Decreases enemy health and destroys on reaching 0 health and adds score to player
     public void hurt(int damage)
     {
         health = health - damage;

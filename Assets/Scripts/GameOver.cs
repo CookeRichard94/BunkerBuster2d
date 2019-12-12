@@ -6,17 +6,14 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
+// Loads the tutorial scene for the player to start again
     public void restart()
     {
         SceneManager.LoadScene(1);
     }
 
+//loads the menu scene 
     public void menu()
     {
         SceneManager.LoadScene(0);

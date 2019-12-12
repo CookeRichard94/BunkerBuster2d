@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     Vector2 mousePos;
 
+    //Method to cotnrol player objects moveemnt
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
 
+    // Method to have the player aim towards the mourse cursor
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);

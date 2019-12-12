@@ -14,13 +14,13 @@ public class TankScript : MonoBehaviour
     public GameObject playerBullet;
     public GameObject player;
 
-    // Start is called before the first frame update
+    // Has the tank constantly firing t regular intervals
     void Start()
     {
         InvokeRepeating("shoot", 0.5f, 2f);
     }
 
-    // Update is called once per frame
+    // Method to have the tank aim at the player
     void Update()
     {
          Vector3 targetPosition = player.transform.position;
@@ -30,6 +30,7 @@ public class TankScript : MonoBehaviour
         Quaternion.Euler(0f,0f,angle * Mathf.Rad2Deg - 90f);
     }
 
+    // Dhoot method adds force to the tanks bullets
     void shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
@@ -38,6 +39,7 @@ public class TankScript : MonoBehaviour
         
     }
 
+    // Method to decrease the tanks health where if health is reduced to 0 the tank is destroyed, the win scene is loaded and the score added to the players
      public void hurt(int damage)
     {
         health = health - damage;
